@@ -1,4 +1,37 @@
 /* Isa - ryuyunjong, C - CREATE, U - UPDATE */
 /* Isa mywebpage - 2019.10.19.C -Isa */
 
+
+/* reset */
 @import "reset.css";
+
+/* interface */
+
+.blind {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden;}
+
+
+/* layout */
+
+#wrap {display: block; margin: 0; padding: 0; box-sizing: border-box;}
+#wrap:after {display: block; content: ''; clear: both;}
+#header {display: flex; position: fixed; width: 100%; height: 50px; border: rgb(226, 226, 226) 1px solid;}
+#container {position: relative; width: 100%; min-height: 500px; padding: 50px 0 0 0; border: rgb(226, 226, 226) 1px solid; z-index: -99999;}
+#footer {position: absolute; bottom: 0; width: 100%; height: 30px; background: rgb(97, 97, 97); z-index: -99999;}
+
+
+/* header */
+
+#header h1 {flex: 1;}
+#header .header_nav {flex: 3;}
+#header .header_ham {flex: initial; position: relative; width: 50px;}
+#header .active {flex-basis: 100%;}
+
+
+.header_ham .hamber_line {display: inline-block; position: absolute; left: 10px; width: 24px; height: 1.5px; background: rgb(211, 91, 91);}
+.header_ham .hamber_line:first-child {top: 14px;}
+.header_ham .hamber_line:nth-child(2n) {top: 22px;}
+.header_ham .hamber_line:nth-child(3n) {top: 30px;}
+.header_ham_box {display: block; position: fixed; top: 0; width: 100vw; height: 100vh; background: rgb(245, 199, 199); z-index: 999999;}
+
+.header_ham_box ul {display: block; position: fixed; right: 0; width: 70%; min-width: 250px; height: 100vh; padding: 20px 0 0 0; background: rgb(189, 189, 201);}
+.header_ham_box ul li{text-align: right; padding: 0 20px 0 0;}
