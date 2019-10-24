@@ -14,7 +14,7 @@
 
 #wrap {display: block; margin: 0; padding: 0; box-sizing: border-box;}
 #wrap:after {display: block; content: ''; clear: both;}
-#header {display: flex; position: fixed; width: 100%; height: 50px; border: rgb(226, 226, 226) 1px solid;}
+#header {display: flex; flex-wrap: wrap; position: fixed; width: 100%; height: 50px; border: rgb(226, 226, 226) 1px solid; box-shadow: rgb(163, 163, 163) 1px 1px 5px;}
 #container {position: relative; width: 100%; min-height: 500px; padding: 50px 0 0 0; border: rgb(226, 226, 226) 1px solid; z-index: -99999;}
 #footer {position: absolute; bottom: 0; width: 100%; height: 30px; background: rgb(97, 97, 97); z-index: -99999;}
 
@@ -26,12 +26,18 @@
 #header .header_ham {flex: initial; position: relative; width: 50px;}
 #header .active {flex-basis: 100%;}
 
-
+.header_nav ul {width: 100%; height: 50px;}
+.header_nav ul li {float: left;}
 .header_ham .hamber_line {display: inline-block; position: absolute; left: 10px; width: 24px; height: 1.5px; background: rgb(211, 91, 91);}
 .header_ham .hamber_line:first-child {top: 14px;}
 .header_ham .hamber_line:nth-child(2n) {top: 22px;}
 .header_ham .hamber_line:nth-child(3n) {top: 30px;}
-.header_ham_box {display: block; position: fixed; top: 0; width: 100vw; height: 100vh; background: rgb(245, 199, 199); z-index: 999999;}
+.active .hamber_line {display: none;}
+.header_ham .header_ham_box {display: none; position: fixed; top: 0; width: 100vw; height: 100vh; background: rgb(245, 199, 199); z-index: 999999;}
+.active .header_ham_box {display: block;}
 
-.header_ham_box ul {display: block; position: fixed; right: 0; width: 70%; min-width: 250px; height: 100vh; padding: 20px 0 0 0; background: rgb(189, 189, 201);}
-.header_ham_box ul li{text-align: right; padding: 0 20px 0 0;}
+
+.header_ham_box ul {display: block; position: fixed; right: -50vw; width: 70%; min-width: 250px; height: 100vh; padding: 20px 0 0 0; transition: right ease-in-out 1s; background: rgb(189, 189, 201);}
+.header_ham_box ul li {text-align: right; padding: 8px 20px 8px 0;}
+.active .header_ham_box ul {right: 0;}
+.header_ham_box a {text-decoration: none; color: inherit;}
