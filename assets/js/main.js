@@ -1,6 +1,6 @@
 // author - Isa(류윤종)
 
-// togle hamberger menu
+// toggle hamberger menu
 const HAMBERGER = $('.header_ham');
 
 function handleHamberMenu(event){
