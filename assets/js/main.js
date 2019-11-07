@@ -33,8 +33,8 @@ function pageLink(url){
   async function asyncCall(url){
     console.log('loading');
     let result = await pageLink(url);
-    CONTAINER.innerHTML(result);
-    console.log(result);
+    CONTAINER.innerHTML = result;
+    
   }
 
   /**
