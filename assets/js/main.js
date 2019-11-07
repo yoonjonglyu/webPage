@@ -43,7 +43,7 @@ function pageLink(url){
    * @return  {string}
    */
   function linkHref(event){
-      if(event.target.nodeName === "A"){
+      if(event.target.nodeName === "A" && event.target.dataset.target !== ''){
         let url = "./view/"+event.target.dataset.target+".html";
         asyncCall(url);
       }
