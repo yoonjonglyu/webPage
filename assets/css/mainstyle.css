@@ -47,6 +47,7 @@ body::-webkit-scrollbar {display: none;}
 
 /* container */
 
+#content {display: block; padding: 24px 24px 0 24px;}
 
 /* footer */
 

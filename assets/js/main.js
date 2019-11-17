@@ -48,6 +48,6 @@ function pageLink(url){
         asyncCall(url);
       }
   }
-
+  asyncCall("./view/index.html");
   HEADER.addEventListener('click', linkHref);
   
