@@ -52,8 +52,6 @@ function pageLink(url){
 
   HEADER.addEventListener('click', linkHref);
 
-  function init() { // 시작함수
+  (function init() { // 시작함수
     asyncCall("./view/index.html"); // 메인 컨텐츠 불러오기
-  }
-  
-  init(); // 초기화
+  })();
