@@ -2,7 +2,6 @@
 
 // toggle hamberger menu
 const HAMBERGER = $('.header_ham');
-const CONTENTS = $('#content');
 
 /**
  * @param  event
@@ -64,7 +63,7 @@ function pageLink(url){
 
 
   HEADER.addEventListener('click', linkHref); // header menu href
-  CONTENTS.addEventListener('click', linkHrefSub); // content href
+  CONTAINER.addEventListener('click', linkHrefSub); // content href
 
   (function init() { // 시작함수
     asyncCall("https://yoonjonglyu.github.io/webPage/view/index.html"); // 메인 컨텐츠 불러오기
