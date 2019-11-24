@@ -1,110 +1,56 @@
-<!DOCTYPE html>
-<html lang="ko">
-    <head>
-        <meta charset="utf-8">
-        <title>Isa의 개발이야기</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Isa,류윤종,ryuyoonjong,ryu,webdeveloper,developer" />
-        <meta name="keywords" content="Isa,류윤종,ryuyoonjong,webdeveloper,웹개발자,웹퍼블리셔,프론트엔드,벡엔드,포트폴리오,레퍼런스" />
-        <meta name="author" content="류윤종" />
-        <link rel="shortcut icon" href="../assets/images/ryufavicon.ico" />
-        <link rel="stylesheet" href="../assets/css/mainstyle.css" />
-        <script src="../assets/js/basic.js"></script>
-    </head>
-    <body>
-        <div id="wrap">
-            <header id="header">
-                <h1><a data-target="index" target="_self" title="메인으로"><img src="../assets/images/home_logo.png" width="24px" height="24px" alt="로고" />ISA<span class="blind">developer柳尹鐘</span></a></h1>
-                <nav class="header_nav">
-                    <ul>
-                        <li><a data-target="about" target="_self" title="소개">소개</a></li>
-                        <li><a data-target="tech" target="_self" title="기술">기술</a></li>
-                        <li><a data-target="source" target="_self" title="소스">소스</a></li>
-                        <li><a data-target="portfolio" target="_self" title="포트폴리오">포트폴리오</a></li>
-                    </ul>
-                </nav><!-- 구성 먼저 짜고 뷰로 개발한다.-->
-                <nav class="header_ham">
-                    <span class="hamber_line"></span>
-                    <span class="hamber_line"></span>
-                    <span class="hamber_line"></span>
-                    <div class="header_ham_box">
-                        <ul> 
-                            <li><a data-target="index" target="_self" title="메인으로"><img src="./assets/images/home_logo.png" width="88px" height="88px" alt="로고" /></a></li>
-                            <li><a data-target="about" target="_self" title="소개">소개</a></li>
-                            <li><a data-target="tech" target="_self" title="기술">기술</a></li>
-                            <li><a data-target="source" target="_self" title="소스">소스</a></li>
-                            <li><a data-target="portfolio" target="_self" title="포트폴리오">포트폴리오</a></li>
-                            <li><a href="https://github.com/yoonjonglyu" target="_blank" title="깃허브">Github</a></li>
-                            <li><a data-target="more" target="_self" title="more">more</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            <article id="container">
-                    <section id="content">
-                            <h2>포트폴리오</h2>
-                            <hr />
-                            <div class="sub_item">
-                                    <a href="#" title="KHNP" target="_blank">
-                                        <h3>한울타리<span class="link_icon"></span></h3>
-                                        <p class="sub_item_about">
-                                            KHNP 한국 수력원자력의 한울사택 커뮤니티 제작 <br />
-                                            기간: 2019.05.15~2019.08.30<br />
-                                            작업인원 : 1명 <br />
-                                            환경: php7,mysql,linux,그누보드<br />
-                                            소개: 반응형 웹으로 제작되었으며, 그누보드 기반으로 게시판 커스텀 & 시설예약시스템 및 차량조회등의 기능이 포함된 입주민 자체 커뮤니티</br>
-                                            혼자서 2개월내에 프론트 & 벡엔드를 구성해서 시연가능하게 개발해달라는 소리에 스파게티로 만들어낸 애증의 프로젝트.<br />
-                                        </p>
-                                    </a>
-                                </div>
-                            <div class="sub_item">
-                                <a href="#" title="지원사업알리미" target="_blank">
-                                    <h3>지원사업 알리미 비즈봇<span class="link_icon"></span></h3>
-                                    <p class="sub_item_about">
-                                            지원사업알리미 챗봇 비즈봇 2.0v 개발 <br />
-                                            기간: 2019.09.15~2019.10.15<br />
-                                            작업인원 : 1명 <br />
-                                            환경: php7,mysql,linux<br />
-                                            소개: 기업마당이라는 (공공)중소기업벤처사업부에서 제공하는 rss를 파싱해와서 자동으로 분류와 선별을 거쳐</br>
-                                            mysql에 저장하고 빠른검색, 키워드 검색,오늘의 지원사업, 내 관심사업조회, 인기사업통계등의 서비스를 제공 광고등의 기능으로 수익창출을 목적으로 한 프로젝트이다.<br />
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="sub_item">
-                                <a href="#" title="아파트톡" target="_blank">
-                                    <h3>아파트톡<span class="link_icon"></span></h3>
-                                    <p class="sub_item_about">
-                                            아파트톡(아파트단지 커뮤니티)챗봇개발 <br />
-                                            기간: 2019.10.10~2019.1025<br />
-                                            작업인원 : 1명 <br />
-                                            환경: php7,mysql,linux<br />
-                                            소개: 아파트톡이라는 커뮤니티 플랫폼에 같이 쓰일 카카오톡 챗봇 기존 커뮤니티 사이트와 연동하여서 로그인하고,<br />
-                                            간편 고지서 조회, 에너지검침 등록 및 조회, 시설예약 및 조회, 방문차량등록 및 조회와 검색 등의 기능을 갖춘 챗봇.<br />
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="sub_item">
-                                <a href="#" title="계수기" target="_blank">
-                                    <h3>피플카운팅<span class="link_icon"></span></h3>
-                                    <p class="sub_item_about">
-                                            입출입 인원 통계 계수기챗봇 <br />
-                                            기간: 2019.11.01~2019.11.08<br />
-                                            작업인원 : 1명 <br />
-                                            환경: php7,mysql,linux<br />
-                                            소개: 울산북구청 계수시스템의 데이터베이스와 연동해서 1.실시간 인원계수, 2.일단위 계수, 3.주단위 계수</br>
-                                            4. 월단위 계수등으로 이루어진 서비스를 제공한다. 다른 지역의 계수기 챗봇을 제작할 것을 고려해서 제작하였다.<br />
-                                    </p>
-                                </a>
-                            </div>
-                        </section>
-            </article>
-            <footer id="footer">
-                <div class="footer_box">
-                    <p class="copyright">© Copyright Isa(류윤종) all right reserved.</p>
-                </div>
-            </footer>
+<section id="content">
+    <h2>포트폴리오</h2>
+    <hr />
+    <div class="sub_item">
+            <a href="#" title="KHNP" target="_blank">
+                <h3>한울타리<span class="link_icon"></span></h3>
+                <p class="sub_item_about">
+                    KHNP 한국 수력원자력의 한울사택 커뮤니티 제작 <br />
+                    기간: 2019.05.15~2019.08.30<br />
+                    작업인원 : 1명 <br />
+                    환경: php7,mysql,linux,그누보드<br />
+                    소개: 반응형 웹으로 제작되었으며, 그누보드 기반으로 게시판 커스텀 & 시설예약시스템 및 차량조회등의 기능이 포함된 입주민 자체 커뮤니티</br>
+                    혼자서 2개월내에 프론트 & 벡엔드를 구성해서 시연가능하게 개발해달라는 소리에 스파게티로 만들어낸 애증의 프로젝트.<br />
+                </p>
+            </a>
         </div>
-        <script src="../assets/js/main.js"></script>
-    </body>
-</html>
+    <div class="sub_item">
+        <a href="#" title="지원사업알리미" target="_blank">
+            <h3>지원사업 알리미 비즈봇<span class="link_icon"></span></h3>
+            <p class="sub_item_about">
+                    지원사업알리미 챗봇 비즈봇 2.0v 개발 <br />
+                    기간: 2019.09.15~2019.10.15<br />
+                    작업인원 : 1명 <br />
+                    환경: php7,mysql,linux<br />
+                    소개: 기업마당이라는 (공공)중소기업벤처사업부에서 제공하는 rss를 파싱해와서 자동으로 분류와 선별을 거쳐</br>
+                    mysql에 저장하고 빠른검색, 키워드 검색,오늘의 지원사업, 내 관심사업조회, 인기사업통계등의 서비스를 제공 광고등의 기능으로 수익창출을 목적으로 한 프로젝트이다.<br />
+            </p>
+        </a>
+    </div>
+    <div class="sub_item">
+        <a href="#" title="아파트톡" target="_blank">
+            <h3>아파트톡<span class="link_icon"></span></h3>
+            <p class="sub_item_about">
+                    아파트톡(아파트단지 커뮤니티)챗봇개발 <br />
+                    기간: 2019.10.10~2019.1025<br />
+                    작업인원 : 1명 <br />
+                    환경: php7,mysql,linux<br />
+                    소개: 아파트톡이라는 커뮤니티 플랫폼에 같이 쓰일 카카오톡 챗봇 기존 커뮤니티 사이트와 연동하여서 로그인하고,<br />
+                    간편 고지서 조회, 에너지검침 등록 및 조회, 시설예약 및 조회, 방문차량등록 및 조회와 검색 등의 기능을 갖춘 챗봇.<br />
+            </p>
+        </a>
+    </div>
+    <div class="sub_item">
+        <a href="#" title="계수기" target="_blank">
+            <h3>피플카운팅<span class="link_icon"></span></h3>
+            <p class="sub_item_about">
+                    입출입 인원 통계 계수기챗봇 <br />
+                    기간: 2019.11.01~2019.11.08<br />
+                    작업인원 : 1명 <br />
+                    환경: php7,mysql,linux<br />
+                    소개: 울산북구청 계수시스템의 데이터베이스와 연동해서 1.실시간 인원계수, 2.일단위 계수, 3.주단위 계수</br>
+                    4. 월단위 계수등으로 이루어진 서비스를 제공한다. 다른 지역의 계수기 챗봇을 제작할 것을 고려해서 제작하였다.<br />
+            </p>
+        </a>
+    </div>
+</section>

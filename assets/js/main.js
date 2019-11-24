@@ -2,6 +2,7 @@
 
 // toggle hamberger menu
 const HAMBERGER = $('.header_ham');
+const CONTENTS = $('#content');
 
 /**
  * @param  event
@@ -49,9 +50,24 @@ function pageLink(url){
       }
   }
 
+    /**
+   * 
+   * @param  event
+   * @return  {string}
+   */
+  function linkHrefSub(event){
+    if(event.target.nodeName === "A" && event.target.dataset.target !== undefined){
+      let url = "https://yoonjonglyu.github.io/webPage/sub/"+event.target.dataset.target+".html";
+      asyncCall(url);
+    }
+}
 
-  HEADER.addEventListener('click', linkHref);
+
+  HEADER.addEventListener('click', linkHref); // header menu href
+  CONTENTS.addEventListener('click', linkHrefSub); // content href
 
   (function init() { // 시작함수
     asyncCall("https://yoonjonglyu.github.io/webPage/view/index.html"); // 메인 컨텐츠 불러오기
   })();
+
+  
