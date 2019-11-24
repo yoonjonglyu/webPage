@@ -44,7 +44,7 @@ function pageLink(url){
    */
   function linkHref(event){
       if(event.target.nodeName === "A" && event.target.dataset.target !== undefined){
-        let url = "./view/"+event.target.dataset.target+".html";
+        let url = "/view/"+event.target.dataset.target+".html";
         asyncCall(url);
       }
   }
@@ -53,5 +53,5 @@ function pageLink(url){
   HEADER.addEventListener('click', linkHref);
 
   (function init() { // 시작함수
-    asyncCall("./view/index.html"); // 메인 컨텐츠 불러오기
+    asyncCall("/view/index.html"); // 메인 컨텐츠 불러오기
   })();
