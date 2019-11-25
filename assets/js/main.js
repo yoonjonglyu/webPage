@@ -58,6 +58,9 @@ function pageLink(url){
     if(event.target.nodeName === "A" && event.target.dataset.target !== undefined){
       let url = "https://yoonjonglyu.github.io/webPage/sub/"+event.target.dataset.target+".html";
       asyncCall(url);
+    } else if(event.target.parentElement.dataset.target !== undefined) {
+      let url = "https://yoonjonglyu.github.io/webPage/sub/"+event.target.parentElement.dataset.target+".html";
+      asyncCall(url);
     }
 }
 
