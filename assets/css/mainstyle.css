@@ -63,6 +63,23 @@ body::-webkit-scrollbar {display: none;}
 .sub_item h3 {color: inherit;}
 .sub_item_about {margin: 12px 0 0 0; color: rgb(71, 71, 71);}
 
+.modal {display: none; position: absolute; top:0; width: 100vw; height: 100%; background-image: url('../images/bg_back.png'); z-index: 9999999;}
+.modal.active {display: block;}
+
+.modal_item {display: none; position: fixed; top: 8vh; left: 5vw; width: 90vw; height: 90vh; background: rgb(255, 255, 255);}
+.modal_item.active {display: block;}
+
+.modal_item .modal_head {display: block; width: 100%; height: 6vh;}
+.modal_item .modal_content {width: 100%; height: 76vh; overflow: auto;}
+.modal_item .close_button {width: 50px; height: 30px; background: rgb(59, 50, 50); color: rgb(228, 227, 227);}
+.modal_item hr {margin: 8px 0 12px 0; border: 0.5px solid teal;}
+
+
+.modal_head h3 {margin: 24px; font-size: 1.8rem; text-align: center;}
+.modal_head .close_button {position: absolute; top: 0; right: 0;}
+
+.modal_content .close_button{display:block; margin: 8px auto;}
+
 /* footer */
 
 #footer .footer_box {padding: 4px 0 0 0; text-align: center;}

@@ -16,9 +16,36 @@ function handleHamberMenu(event){
 
 HAMBERGER.addEventListener('click', handleHamberMenu);
 
+// modal handler
+let modalItem = '';
+
+
+/**
+ * @param  string
+ */
+function openModal(target){
+    const MODAL = $('.modal');
+    modalItem = $(target);
+
+    MODAL.classList.add('active');
+    modalItem.classList.add('active');
+
+    return modalItem;
+}
+
+function closeModal(){
+  const MODAL = $('.modal');
+
+  MODAL.classList.remove('active');
+  modalItem.classList.remove('active');
+
+  return true;
+}
+
 // href page
 const HEADER = $('header');
 const CONTAINER = $("#container");
+const ROOT = location.href; //"https://yoonjonglyu.github.io/webPage";
 
 function pageLink(url){
     return new Promise((resolve, reject) => {
@@ -44,10 +71,10 @@ function pageLink(url){
    */
   function linkHref(event){
       if(event.target.nodeName === "A" && event.target.dataset.target !== undefined){
-        let url = "https://yoonjonglyu.github.io/webPage/view/"+event.target.dataset.target+".html";
+        let url = ROOT+"/view/"+event.target.dataset.target+".html";
         asyncCall(url);
       } else if(event.target.parentElement.dataset.target !== undefined) {
-        let url = "https://yoonjonglyu.github.io/webPage/view/"+event.target.parentElement.dataset.target+".html";
+        let url =  ROOT+"/view/"+event.target.parentElement.dataset.target+".html";
         asyncCall(url);
       }
   }
@@ -59,10 +86,10 @@ function pageLink(url){
    */
   function linkHrefSub(event){
     if(event.target.nodeName === "A" && event.target.dataset.target !== undefined){
-      let url = "https://yoonjonglyu.github.io/webPage/sub/"+event.target.dataset.target+".html";
+      let url = ROOT+"/sub/"+event.target.dataset.target+".html";
       asyncCall(url);
     } else if(event.target.parentElement.dataset.target !== undefined) {
-      let url = "https://yoonjonglyu.github.io/webPage/sub/"+event.target.parentElement.dataset.target+".html";
+      let url = ROOT+"/sub/"+event.target.parentElement.dataset.target+".html";
       asyncCall(url);
     }
 }
