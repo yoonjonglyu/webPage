@@ -38,14 +38,14 @@ function closeModal(){
 
   MODAL.classList.remove('active');
   modalItem.classList.remove('active');
-
+  
   return true;
 }
 
 // href page
 const HEADER = $('header');
 const CONTAINER = $("#container");
-const ROOT = location.href; //"https://yoonjonglyu.github.io/webPage";
+const ROOT = "https://yoonjonglyu.github.io/webPage"; // location.href;
 
 function pageLink(url){
     return new Promise((resolve, reject) => {

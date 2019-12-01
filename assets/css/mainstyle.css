@@ -74,12 +74,12 @@ body::-webkit-scrollbar {display: none;}
 .modal_item .close_button {width: 50px; height: 30px; background: rgb(59, 50, 50); color: rgb(228, 227, 227);}
 .modal_item hr {margin: 8px 0 12px 0; border: 0.5px solid teal;}
 
-
 .modal_head h3 {margin: 24px; font-size: 1.8rem; text-align: center;}
 .modal_head .close_button {position: absolute; top: 0; right: 0;}
 
-.modal_content .close_button{display:block; margin: 8px auto;}
 
+.modal_content .close_button{display:block; margin: 8px auto;}
+.modal_content p {padding: 3px; line-height: 1.5rem;}
 /* footer */
 
 #footer .footer_box {padding: 4px 0 0 0; text-align: center;}
