@@ -80,6 +80,12 @@ body::-webkit-scrollbar {display: none;}
 
 .modal_content .close_button{display:block; margin: 8px auto;}
 .modal_content p {padding: 3px; line-height: 1.5rem;}
+.modal_content h4 {width: 70%; margin: 0 0 8px 0; padding: 8px 0 10px 4px; font-size: 1.2rem; color: rgb(25, 27, 27); border-bottom: orangered 0.5px solid;}
+.modal_content img {width: 30%; height: 40%;}
+.modal_content a {text-decoration: none; color: rgb(163, 25, 25);}
+.modal_content a:hover {text-decoration: underline;}
+
+
 /* footer */
 
 #footer .footer_box {padding: 4px 0 0 0; text-align: center;}
