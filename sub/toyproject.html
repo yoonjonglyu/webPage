@@ -1,0 +1,46 @@
+<section id="content">
+    <h2>포트폴리오</h2>
+    <hr />
+    <div class="sub_item">
+            <a href="javascript:void(0);" onclick="openModal('#modal_1');" title="KHNP" target="_self">
+                <h3>ToDoList<span class="link_icon"></span></h3>
+                <p class="sub_item_about">
+                    basic-ToDoList <br />
+                    기간: 2020.02.03~2020.02.05<br />
+                    작업인원 : 1명 <br />
+                    환경: vue.js,git,netlify<br />
+                    소개: 뷰로 만든 ToDoList<br />
+                </p>
+            </a>
+        </div>
+</section>
+<section class="modal">
+    <div id="modal_1" class="modal_item">
+        <div class="modal_head">
+            <h3>ToDoList</h3>
+            <button class="close_button" onclick="closeModal();">close</button>
+        </div>
+        <hr />
+        <article class="modal_content">
+            <h4>프로젝트 환경</h4>
+            <p>
+                공부하면서 뭘만들까 고민하다 도저히 생각이 안나서 선택하고 만든 프로젝트
+            </p>
+            <h4>프로젝트 요구</h4>
+            <p>
+                vue.js로 웹 컴포넌트 방식의 최신기술을 적용한 간단한 웹앱
+            </p>
+            <h4>개발 과정</h4>
+            <p>
+                cdn방식과의 차이 vue cli 사용과 미사용 차이 웹팩 설정이나 바벨설정 eslint나 vue+ts등 여러가지 시도해보고 그냥 베이직하게 개발함.
+                웹팩 빌드을 통해서 만든 파일을 정적호스팅하는 방법에 대한 이해도가 떨어진다는 생각이 들었다.
+            </p>
+            <h4>프로젝트 관련 링크</h4>
+            <p>
+                <a href="https://yunjonglyu-todolist.netlify.com/" title="퍼블리싱" target="_blank">ToDoList링크</a><br />
+            </p>
+            <hr />
+            <button class="close_button" onclick="closeModal();">close</button>
+        </article>
+    </div>
+</section>
