@@ -16,7 +16,7 @@ body::-webkit-scrollbar {display: none;}
 #wrap {display: flex; flex-direction: column; margin: 0; padding: 0; box-sizing: border-box;}
 #wrap:after {display: block; content: ''; clear: both;}
 #header {display: flex; flex-wrap: wrap; position: fixed; width: 100%; height: 50px; background: rgb(255, 255, 255); border: rgb(226, 226, 226) 1px solid; box-shadow: rgb(163, 163, 163) 1px 0px 8px; z-index: 9999999;}
-#container {position: relative; width: 100%; min-height: 95vh; padding: 58px 0 0 0; border: rgb(226, 226, 226) 1px solid;}
+#container {position: relative; width: 100%; max-width: 800px; min-height: 95vh; margin: 0 auto; padding: 58px 0 0 0; border: rgb(226, 226, 226) 1px solid;}
 #footer {width: 100%; height: 30px; background: rgb(97, 97, 97); z-index: -99999;}
 
 
@@ -49,6 +49,7 @@ body::-webkit-scrollbar {display: none;}
 
 #content {display: block; padding: 24px 24px 0 24px; font-size: 0.9rem; line-height: 1.5rem;}
 
+
 #content h2 {font-size: 1.6rem; font-weight: bold; color: rgb(30, 123, 199);}
 #content h3 {font-size: 1.3rem; font-weight: bold;}
 #content hr {margin: 8px 0 12px 0; border: 0.5px solid teal;}
@@ -56,12 +57,14 @@ body::-webkit-scrollbar {display: none;}
 #content strong {font-size: 1rem; font-weight: bold; color: rgb(14, 39, 59);}
 #content ul {width: auto; margin: 12px auto; text-align: center;}
 #content ul li {width: auto;}
+#content .main {height: 600px;}
 
 .sub_item {margin: 24px 0 12px 0; border-bottom: 0.5px solid rgb(194, 194, 194);}
 .sub_item a {text-decoration: none; color: rgb(82, 49, 49);}
 .sub_item a:hover, .sub_item a:active {color: rgb(86, 86, 207);}
 .sub_item h3 {color: inherit;}
 .sub_item_about {margin: 12px 0 0 0; color: rgb(71, 71, 71);}
+.main canvas {width: 100%; height: 400px; background: rgb(227, 231, 240);}
 
 .modal {display: none; position: absolute; top:0; width: 100vw; height: 100%; background-image: url('../images/bg_back.png'); z-index: 9999999;}
 .modal.active {display: block;}
