@@ -66,7 +66,7 @@ body::-webkit-scrollbar {display: none;}
 .sub_item_about {margin: 12px 0 0 0; color: rgb(71, 71, 71);}
 .main canvas {width: 100%; height: 400px; background: rgb(227, 231, 240);}
 
-.modal {display: none; position: absolute; top:0; width: 100vw; height: 100%; background-image: url('../images/bg_back.png'); z-index: 9999999;}
+.modal {display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100%; background-image: url('../images/bg_back.png'); z-index: 9999999;}
 .modal.active {display: block;}
 
 .modal_item {display: none; position: fixed; top: 8vh; left: 5vw; width: 90vw; height: 90vh; background: rgb(255, 255, 255);}
