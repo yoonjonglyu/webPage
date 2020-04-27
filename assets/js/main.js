@@ -110,7 +110,7 @@ function pageLink(url){
 
   HEADER.addEventListener('click', linkHref); // header menu href
   CONTAINER.addEventListener('click', linkHrefSub); // content href
-  window.onkeypress = noReflash;
+  document.onkeypress = noReflash;
 
   (function init() { // 시작함수
     asyncCall("https://yoonjonglyu.github.io/webPage/view/index.html", "index"); // 메인 컨텐츠 불러오기
