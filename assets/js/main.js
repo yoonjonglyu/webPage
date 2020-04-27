@@ -100,7 +100,7 @@ function pageLink(url){
   CONTAINER.addEventListener('click', linkHrefSub); // content href
 
   (function init() { // 시작함수
-    asyncCall("https://yoonjonglyu.github.io/webPage/view/index.html"); // 메인 컨텐츠 불러오기
+    asyncCall("https://yoonjonglyu.github.io/webPage/view/index.html", "main"); // 메인 컨텐츠 불러오기
   })();
 
   
