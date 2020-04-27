@@ -57,9 +57,10 @@ function pageLink(url){
     });
   }
   
-  async function asyncCall(url){
+  async function asyncCall(url, data){
     console.log('loading');
     let result = await pageLink(url);
+    history.pushState({data : data}, "data", './'+data);
     CONTAINER.innerHTML = result;
     
   }
@@ -72,10 +73,10 @@ function pageLink(url){
   function linkHref(event){
       if(event.target.nodeName === "A" && event.target.dataset.target !== undefined){
         let url = ROOT+"/view/"+event.target.dataset.target+".html";
-        asyncCall(url);
+        asyncCall(url, event.target.dataset.target);
       } else if(event.target.parentElement.dataset.target !== undefined) {
         let url =  ROOT+"/view/"+event.target.parentElement.dataset.target+".html";
-        asyncCall(url);
+        asyncCall(url, event.target.parentElement.dataset.target);
       }
   }
 
@@ -87,10 +88,10 @@ function pageLink(url){
   function linkHrefSub(event){
     if(event.target.nodeName === "A" && event.target.dataset.target !== undefined){
       let url = ROOT+"/sub/"+event.target.dataset.target+".html";
-      asyncCall(url);
+      asyncCall(url, event.target.dataset.target);
     } else if(event.target.parentElement.dataset.target !== undefined) {
       let url = ROOT+"/sub/"+event.target.parentElement.dataset.target+".html";
-      asyncCall(url);
+      asyncCall(url, event.target.parentElement.dataset.target);
     }
 }
 
