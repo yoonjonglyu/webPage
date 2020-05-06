@@ -118,7 +118,7 @@ function pageLink(url){
   document.onkeypress = noReflash;
 
   (function init() { // 시작함수
-    //asyncCall("https://yoonjonglyu.github.io/webPage/view/index.html", "index"); // 메인 컨텐츠 불러오기
+    asyncCall("https://yoonjonglyu.github.io/webPage/view/index.html", "index"); // 메인 컨텐츠 불러오기
   })();
 
   
