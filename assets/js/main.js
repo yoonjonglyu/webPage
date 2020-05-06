@@ -56,22 +56,13 @@ function pageLink(url){
       xhr.send();
     });
   }
-  
-  async function asyncScirpt(url){
-    console.log('soure loading');
-    const result = await pageLink(url);
-    CONTAINER.querySelector("script").innerHTML = result;
-  }
 
   async function asyncCall(url, data){
     console.log('loading');
     const result = await pageLink(url);
     history.pushState({data : data}, "isa", './'+data);
     CONTAINER.innerHTML = result;
-  
-    if(data === "index"){
-      asyncScirpt("https://yoonjonglyu.github.io/webPage/assets/js/baner.js");
-    }
+
   }
 
 
