@@ -30,7 +30,7 @@ function drawBall(X, Y) {
     const RANDOMA = Math.ceil(Math.random()*100);
     const RANDOMB = Math.ceil(Math.random()*130);
     const RANDOMS = Math.ceil(Math.random()*8);
-    const COLOR = ["red", "blue", "cyan", "gray", "tomato", "lightblue", "orange", "green"];
+    const COLOR = ["#30A9DE", "#EFDC05", "#E53A40", "#090707", "#E71D36", "#2EC4B6", "#EFFFE9", "#011627"];
     let xx = X;
     let yy = Y;
 
@@ -66,11 +66,11 @@ function drawBall(X, Y) {
 
 function draw() {
 
-    setInterval(drawBall, 200, CENTERX, CENTERY);
-    setInterval(drawBall, 200, CENTERX, CENTERY);
-    setInterval(drawBall, 200, CENTERX, CENTERY);
-    setInterval(drawBall, 200, CENTERX, CENTERY);
-    setInterval(drawBall, 200, CENTERX, CENTERY);
+    setInterval(drawBall, 100, CENTERX, CENTERY);
+    setInterval(drawBall, 100, CENTERX, CENTERY);
+    setInterval(drawBall, 100, CENTERX, CENTERY);
+    setInterval(drawBall, 100, CENTERX, CENTERY);
+    setInterval(drawBall, 100, CENTERX, CENTERY);
     
 }
 
