@@ -95,5 +95,29 @@ body::-webkit-scrollbar {display: none;}
 
 #footer .footer_box {padding: 4px 0 0 0; text-align: center;}
 
+/* loading */
+
+.loading {display: none; position: fixed; width: 100%; height: 100vh; background: url("../images/bg_back.png"); z-index: 9999999;}
+.loading.active{display: block;}
+.loading_box {position: absolute; top: 50%; left: 50%; width: auto; transform: translate(-50%); background: rgb(160, 187, 226);}
+
+.loading_box span {display: inline-block; margin: 0 auto; font-size: 1.5rem; color: rgb(14, 12, 29); animation:  loading .7s infinite;}
+.loading_box span:nth-child(2) {animation-delay: .1s;}
+.loading_box span:nth-child(3) {animation-delay: .2s;}
+.loading_box span:nth-child(4) {animation-delay: .3s;}
+.loading_box span:nth-child(5) {animation-delay: .4s;}
+.loading_box span:nth-child(6) {animation-delay: .5s;}
+.loading_box span:nth-child(7) {animation-delay: .6s;}
+.loading_box span:nth-child(8) {animation-delay: .8s;}
+
+@keyframes loading{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+
 /* media */
 

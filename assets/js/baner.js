@@ -95,7 +95,7 @@ function draw() {
     canvas = $('#main_baner');
     ctx = canvas.getContext('2d');
     let state = drawStepOne();
-    setTimeout(drawStepTwo, 10000, state);
+    setTimeout(drawStepTwo, 4000, state);
     
 }
 

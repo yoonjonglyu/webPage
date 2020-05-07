@@ -42,6 +42,21 @@ function closeModal(){
   return true;
 }
 
+// loading handle
+const LOADING = $('.loading');
+
+/**
+ * @param number
+ * 
+ */
+function loadingHandle(check){
+  if(check === 1){
+    LOADING.classList.add('active');
+} else{
+  LOADING.classList.remove('active');
+}
+}
+
 // href page
 const HEADER = $('header');
 const CONTAINER = $("#container");
@@ -58,13 +73,12 @@ function pageLink(url){
   }
 
   async function asyncCall(url, data){
-    console.log('loading');
+    loadingHandle(1);
     const result = await pageLink(url);
     history.pushState({data : data}, "isa", './'+data);
     CONTAINER.innerHTML = result;
-    
+    loadingHandle(0);
     if(data === "index"){
-      console.log("draw");
       draw();
     }
   }
