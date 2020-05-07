@@ -62,7 +62,11 @@ function pageLink(url){
     const result = await pageLink(url);
     history.pushState({data : data}, "isa", './'+data);
     CONTAINER.innerHTML = result;
-
+    
+    if(data === "index"){
+      console.log("draw");
+      draw();
+    }
   }
 
 

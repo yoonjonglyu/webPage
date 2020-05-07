@@ -3,25 +3,33 @@
 // main baner canvas
 
 // canvas 2d set
-const CANVAS = $('#main_baner');
-const CTX = CANVAS.getContext('2d');
-const CENTERX = CANVAS.width/2;
-const CENTERY = CANVAS.height/2;
+let canvas = $('#main_baner');
+let ctx = canvas.getContext('2d');
+const CENTERX = canvas.width/2;
+const CENTERY = canvas.height/2;
+
 
 class PaintPath {
     static getReat(X, Y, width, height, color){
-        CTX.beginPath();
-        CTX.rect(X, Y, width, height);
-        CTX.fillStyle = color;
-        CTX.fill();
-        CTX.closePath();
+        ctx.beginPath();
+        ctx.rect(X, Y, width, height);
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.closePath();
     }
+
     static getCircle(X, Y, radius, ball, color){
-        CTX.beginPath();
-        CTX.arc(X, Y, radius, ball, 0, Math.PI*2);
-        CTX.fillStyle = color;
-        CTX.fill();
-        CTX.closePath();
+        ctx.beginPath();
+        ctx.arc(X, Y, radius, ball, 0, Math.PI*2);
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    static getText(fontSize, font, color, text, X, Y){
+        ctx.font = fontSize+" "+font;
+        ctx.fillStyle = color;
+        ctx.fillText(text,X,Y);
     }
 }
 
@@ -30,6 +38,7 @@ function drawBall(X, Y) {
     const RANDOMA = Math.ceil(Math.random()*100);
     const RANDOMB = Math.ceil(Math.random()*130);
     const RANDOMS = Math.ceil(Math.random()*8);
+    const RANDOMP = Math.ceil(Math.random()*5);
     const COLOR = ["#30A9DE", "#EFDC05", "#E53A40", "#090707", "#E71D36", "#2EC4B6", "#EFFFE9", "#011627"];
     let xx = X;
     let yy = Y;
@@ -60,17 +69,31 @@ function drawBall(X, Y) {
         yy = yy + RANDOMB - RANDOMA;
     }
 
-    PaintPath.getCircle(xx, yy, 4, 10, COLOR[RANDOMS-1]);
+    PaintPath.getCircle(xx, yy, 4+RANDOMP, Math.PI*2, COLOR[RANDOMS-1]);
     
 }
 
-function draw() {
+function drawStepOne() {
+    const BALL1 = setInterval(drawBall, 50, CENTERX, CENTERY);
+    const BALL2 = setInterval(drawBall, 50, CENTERX, CENTERY);
+    const BALL3 = setInterval(drawBall, 50, CENTERX, CENTERY);
+    const BALL4 = setInterval(drawBall, 50, CENTERX, CENTERY);
 
-    setInterval(drawBall, 100, CENTERX, CENTERY);
-    setInterval(drawBall, 100, CENTERX, CENTERY);
-    setInterval(drawBall, 100, CENTERX, CENTERY);
-    setInterval(drawBall, 100, CENTERX, CENTERY);
-    setInterval(drawBall, 100, CENTERX, CENTERY);
+    return [BALL1, BALL2, BALL3, BALL4];
+}
+
+function drawStepTwo(state) {
+    clearInterval(state[0]);
+    clearInterval(state[1]);
+    clearInterval(state[2]);
+    clearInterval(state[3]);
+}
+
+function draw() {
+    canvas = $('#main_baner');
+    ctx = canvas.getContext('2d');
+    let state = drawStepOne();
+    setTimeout(drawStepTwo, 10000, state);
     
 }
 
