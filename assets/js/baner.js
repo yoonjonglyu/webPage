@@ -87,6 +87,8 @@ function drawStepTwo(state) {
     clearInterval(state[1]);
     clearInterval(state[2]);
     clearInterval(state[3]);
+    PaintPath.getReat(24, 24, canvas.width-48, canvas.height-48, "#c9d6df");
+    PaintPath.getText("1rem", "나눔 고딕", "#ff5722", "안녕하세요. 개발자ISA입니다.", 48, CENTERY);
 }
 
 function draw() {
