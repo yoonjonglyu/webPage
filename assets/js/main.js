@@ -52,9 +52,9 @@ const LOADING = $('.loading');
 function loadingHandle(check){
   if(check === 1){
     LOADING.classList.add('active');
-} else{
-  LOADING.classList.remove('active');
-}
+  } else{
+    LOADING.classList.remove('active');
+  }
 }
 
 // href page
@@ -75,7 +75,7 @@ function pageLink(url){
   async function asyncCall(url, data){
     loadingHandle(1);
     const result = await pageLink(url);
-    history.pushState({data : data}, "isa", './'+data);
+    history.pushState({data : data}, "ISA", '#'+data);
     CONTAINER.innerHTML = result;
     loadingHandle(0);
     if(data === "index"){
@@ -132,7 +132,20 @@ function pageLink(url){
   document.onkeypress = noReflash;
 
   (function init() { // 시작함수
-    asyncCall("https://yoonjonglyu.github.io/webPage/view/index.html", "index"); // 메인 컨텐츠 불러오기
+    const SITEMAP = ["#index", "#about", "#tech", "#source", "#portfolio", "#more", "#toyproject", "#persona"];
+    const SITEMAPSUB = ["toyproject", "persona"];
+
+    if(SITEMAP.indexOf(location.hash) === -1){
+      asyncCall("https://yoonjonglyu.github.io/webPage/view/index.html", "index"); // 메인 컨텐츠 불러오기
+    } else {
+      const PAGEVIEW = location.hash.slice(1);
+
+      if(SITEMAPSUB.indexOf(PAGEVIEW) === -1){
+        asyncCall("https://yoonjonglyu.github.io/webPage/view/" + PAGEVIEW + ".html", PAGEVIEW);  
+      } else {
+        asyncCall("https://yoonjonglyu.github.io/webPage/sub/" + PAGEVIEW + ".html", PAGEVIEW);
+      }
+    }
   })();
 
   
