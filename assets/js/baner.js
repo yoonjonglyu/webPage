@@ -98,5 +98,3 @@ function draw() {
     setTimeout(drawStepTwo, 4000, state);
     
 }
-
-draw();
