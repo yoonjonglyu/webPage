@@ -12,7 +12,19 @@
                     소개: 뷰로 만든 ToDoList<br />
                 </p>
             </a>
-        </div>
+    </div>
+    <div class="sub_item">
+        <a href="javascript:void(0);" onclick="openModal('#modal_2');" title="ToDoList" target="_self">
+            <h3>vainillaSpa<span class="link_icon"></span></h3>
+            <p class="sub_item_about">
+                vainillaSpa <br />
+                기간: 2020.08.23~<br />
+                작업인원 : 1명 <br />
+                환경: javaScript,git<br />
+                소개: 바닐라 자바스크립트로 만든 Spa 라이브러리<br />
+            </p>
+        </a>
+</div>
 </section>
 <section class="modal">
     <div id="modal_1" class="modal_item">
@@ -39,6 +51,34 @@
             <p>
                 <a href="https://yunjonglyu-todolist.netlify.com/" title="todolist" target="_blank">ToDoList링크</a><br />
                 <a href="https://github.com/yoonjonglyu/vue-todolist" title="gitrepo" target="_blank">Github</a><br />
+            </p>
+            <hr />
+            <button class="close_button" onclick="closeModal();">close</button>
+        </article>
+    </div>
+    <div id="modal_2" class="modal_item">
+        <div class="modal_head">
+            <h3>ToDoList</h3>
+            <button class="close_button" onclick="closeModal();">close</button>
+        </div>
+        <hr />
+        <article class="modal_content">
+            <h4>프로젝트 환경</h4>
+            <p>
+                프로그래머스 데브매칭 프론트엔드 챌린지를 참가하면서 느낀점인 바닐라로 기타 프레임워크 기능을 어느 정도까지 구현 할 수 있을까? <br />
+                내가 어느 정도 까지 숙련되었나? 라는 목적으로 만든 토이 프로젝트.
+            </p>
+            <h4>프로젝트 요구</h4>
+            <p>
+                바닐라 자바스크립트로 싱글페이지 어플리케이션 기본적인 기능들 구현하기.
+            </p>
+            <h4>개발 과정</h4>
+            <p>
+                프로젝트 구조를 먼저 짜고 대략적인 방향성을 정한후 그거에 맞게 개발 진행중.
+            </p>
+            <h4>프로젝트 관련 링크</h4>
+            <p>
+                <a href="https://github.com/yoonjonglyu/vainillaSpa" title="gitrepo" target="_blank">Github</a><br />
             </p>
             <hr />
             <button class="close_button" onclick="closeModal();">close</button>
