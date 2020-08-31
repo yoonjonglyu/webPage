@@ -4,6 +4,10 @@
 
 // canvas 2d set
 let canvas = $('#main_baner');
+const canvasWidth = canvas.offsetWidth;
+const canvasHeight = canvas.offsetHeight;
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
 let ctx = canvas.getContext('2d');
 const CENTERX = canvas.width/2;
 const CENTERY = canvas.height/2;
@@ -35,8 +39,8 @@ class PaintPath {
 
 
 function drawBall(X, Y) {
-    const RANDOMA = Math.ceil(Math.random()*100);
-    const RANDOMB = Math.ceil(Math.random()*130);
+    const RANDOMA = Math.ceil(Math.random()*180);
+    const RANDOMB = Math.ceil(Math.random()*180);
     const RANDOMS = Math.ceil(Math.random()*8);
     const RANDOMP = Math.ceil(Math.random()*5);
     const COLOR = ["#30A9DE", "#EFDC05", "#E53A40", "#090707", "#E71D36", "#2EC4B6", "#EFFFE9", "#011627"];
@@ -88,13 +92,16 @@ function drawStepTwo(state) {
     clearInterval(state[2]);
     clearInterval(state[3]);
     PaintPath.getReat(24, 24, canvas.width-48, canvas.height-48, "#c9d6df");
-    PaintPath.getText("1rem", "나눔 고딕", "#ff5722", "안녕하세요. 개발자ISA입니다.", 48, CENTERY);
+    PaintPath.getText("1rem", "나눔 고딕", "#ff5722", "안녕하세요. 개발자ISA입니다.",  CENTERX - 100, CENTERY);
 }
 
 function draw() {
     canvas = $('#main_baner');
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
     ctx = canvas.getContext('2d');
     let state = drawStepOne();
+
     setTimeout(drawStepTwo, 4000, state);
     
 }
