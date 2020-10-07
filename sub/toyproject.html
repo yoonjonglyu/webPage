@@ -33,7 +33,19 @@
                 기간: 2020.08.30~2020.09.03<br />
                 작업인원 : 1명 <br />
                 환경: javaScript,git<br />
-                소개: pure javaScript & Canvas Web game<br />
+                소개: vanilla javaScript & Canvas Web game<br />
+            </p>
+        </a>
+    </div>
+    <div class="sub_item">
+        <a href="javascript:void(0);" onclick="openModal('#modal_4');" title="ToDoList" target="_self">
+            <h3>korean-lotto<span class="link_icon"></span></h3>
+            <p class="sub_item_about">
+                korean-lotto <br />
+                기간: 2020.09.14~2020.10.07<br />
+                작업인원 : 1명 <br />
+                환경: react, redux, webpack, tailwind, php, git<br />
+                소개: webpack + react + tailwind 오픈 api를 활용한 로또 추첨기<br />
             </p>
         </a>
     </div>
@@ -115,12 +127,42 @@
             </p>
             <h4>개발 과정</h4>
             <p>
-                프로젝트 구조를 먼저 짜고 대략적인 방향성을 정한후 그거에 맞게 개발 진행중.
+                프로젝트 구조를 먼저 짜고 대략적인 방향성을 정한후 그거에 맞게 개발 진행.
             </p>
             <h4>프로젝트 관련 링크</h4>
             <p>
                 <a href="https://github.com/yoonjonglyu/boundBallGame" title="gitrepo" target="_blank">Github</a><br />
                 <a href="https://yoonjonglyu.github.io/boundBallGame/" title="boundBallGame" target="_blank">boundBallGame</a><br />
+            </p>
+            <hr />
+            <button class="close_button" onclick="closeModal();">close</button>
+        </article>
+    </div>
+    <div id="modal_4" class="modal_item">
+        <div class="modal_head">
+            <h3>ToDoList</h3>
+            <button class="close_button" onclick="closeModal();">close</button>
+        </div>
+        <hr />
+        <article class="modal_content">
+            <h4>프로젝트 환경</h4>
+            <p>
+                webpack 설정 부터 cra 안쓰고 해본 로또추첨사이트.<br />
+                react hook과 리덕스를 사용한 FP 방식의 컴포넌트 구성<br />
+                한강 수온을 보여주며 요행에 기대는 것을 경고하며 기본적으로 지난 회차 당첨번호들을 조회해보거나 랜덤으로 로또번호를 추첨이가능하다.
+            </p>
+            <h4>프로젝트 요구</h4>
+            <p>
+                cra 사용하지 않고 webpack 설정부터 다시 잡아가면서 react redux tailwind 적용 학습
+            </p>
+            <h4>개발 과정</h4>
+            <p>
+                프로젝트 구조를 먼저 짜고 대략적인 방향성을 정한후 그거에 맞게 개발 진행.
+            </p>
+            <h4>프로젝트 관련 링크</h4>
+            <p>
+                <a href="https://github.com/yoonjonglyu/korean-lotto/" title="gitrepo" target="_blank">Github</a><br />
+                <a href="https://yoonjonglyu.github.io/korean-lotto/" title="korean-lotto" target="_blank">korean-lotto</a><br />
             </p>
             <hr />
             <button class="close_button" onclick="closeModal();">close</button>
