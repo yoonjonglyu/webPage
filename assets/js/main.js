@@ -114,7 +114,7 @@ function pageLink(url){
     }
 }
 
-  function noReflash(){
+  function noReflash(event){
     if(event.keyCode === 78 && event.ctrlKey === true){
       event.keyCode = 0;
       return false;
